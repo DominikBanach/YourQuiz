@@ -1,0 +1,101 @@
+<Button>:
+    font_size: 40
+    size_hint: 0.25, 0.3
+    background_color: 1,0,0.2,1
+    
+<Front>:
+
+    question_label: question_label
+    a_answer_label: a_answer_label
+    b_answer_label: b_answer_label
+    c_answer_label: c_answer_label
+    d_answer_label: d_answer_label
+    answer_tip_label: answer_tip_label
+    btn_a: btn_a
+    btn_b: btn_b
+    btn_c: btn_c
+    btn_d: btn_d
+    btn_next: btn_next
+
+    FloatLayout:
+    
+        size: root.width, root.height
+
+        Label:
+            id: question_label
+            text: ">question text<"
+            size_hint: 1, 0.2
+            pos_hint: {"top" : 1}
+            font_size: 25
+            color: 1,1,0.2,1
+
+        Label:
+            id: a_answer_label
+            text: ">answer A<"
+            size_hint: 1, 0.1
+            pos_hint: {"top" : 0.8}
+            font_size: 20
+            color: 0,0.6,0.8,1
+
+        Label:
+            id: b_answer_label
+            text: ">answer B<"
+            size_hint: 1, 0.1
+            pos_hint: {"top" : 0.7}
+            font_size: 20
+            color: 0,0.6,0.8,1
+
+        Label:
+            id: c_answer_label
+            text: ">answer C<"
+            size_hint: 1, 0.1
+            pos_hint: {"top" : 0.6}
+            font_size: 20
+            color: 0,0.6,0.8,1
+
+        Label:
+            id: d_answer_label
+            text: ">answer D<"
+            size_hint: 1, 0.1
+            pos_hint: {"top" : 0.5}
+            font_size: 20
+            color: 0,0.6,0.8,1
+
+        Label:
+            id: answer_tip_label
+            text: ">Wrong/Right<"
+            size_hint: 0.8, 0.1
+            pos_hint: {"top" : 0.4}
+            font_size: 35
+        
+        Button:
+            id: btn_next
+            text: "Next question"
+            size_hint: 0.2, 0.1
+            pos_hint: {"top" : 0.4, "right" : 1}
+            font_size: 15
+            background_color: 0,0,1,1
+            on_press: root.btn_next_pressed()
+
+        Button:
+            id: btn_a
+            text: "A" 
+            on_press: root.btn_a_pressed()
+
+        Button:
+            id: btn_b
+            text: "B" 
+            pos_hint: {"right" : 0.5}
+            on_press: root.btn_b_pressed()
+
+        Button:
+            id: btn_c
+            text: "C" 
+            pos_hint: {"right" : 0.75}
+            on_press: root.btn_c_pressed()
+
+        Button:
+            id: btn_d
+            text: "D"
+            pos_hint: {"right" : 1}
+            on_press: root.btn_d_pressed()
